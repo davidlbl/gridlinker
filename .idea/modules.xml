@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/gridlinker-main/code/gridlinker-domain/gridlinker-domain.iml" filepath="$PROJECT_DIR$/gridlinker-main/code/gridlinker-domain/gridlinker-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/gridlinker-main/code/gridlinker-infrastructure/gridlinker-infrastructure.iml" filepath="$PROJECT_DIR$/gridlinker-main/code/gridlinker-infrastructure/gridlinker-infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/gridlinker-main (1).iml" filepath="$PROJECT_DIR$/.idea/gridlinker-main (1).iml" />
-      <module fileurl="file://$PROJECT_DIR$/gridlinker-main/code/jacoco-report-aggregate/jacoco-report-aggregate.iml" filepath="$PROJECT_DIR$/gridlinker-main/code/jacoco-report-aggregate/jacoco-report-aggregate.iml" />
     </modules>
   </component>
 </project>

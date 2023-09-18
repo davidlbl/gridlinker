@@ -115,7 +115,6 @@
     <module>gridlinker-infrastructure</module>
     <module>gridlinker-api-rest</module>
     <module>gridlinker-boot</module>
-    <module>jacoco-report-aggregate</module>
   </modules>
 
   <name>${project.groupId}:${project.artifactId}</name>
