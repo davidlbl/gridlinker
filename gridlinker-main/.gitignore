@@ -41,7 +41,7 @@ local.properties
 .clover/
 
 # IntelliJ
-.idea
+.idea/
 *.iml
 
 # yarn specific
