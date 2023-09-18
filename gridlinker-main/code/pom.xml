@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>gridlinker</artifactId>
+
+  <build>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-release-plugin</artifactId>
+          <configuration>
+            <arguments>-DskipEnforceSnapshots -DskipITs -Dbuild.type=release</arguments>
+            <goals>-DskipTests -DskipITs deploy</goals>
+            <projectVersionPolicyId>SemVerVersionPolicy</projectVersionPolicyId>
+            <releaseStrategyId>GithubReleaseStrategy</releaseStrategyId>
+            <scmDevelopmentCommitComment>@{prefix} Prepare for next development iteration
+            </scmDevelopmentCommitComment>
+            <scmReleaseCommitComment>@{prefix} Prepare release @{releaseLabel}</scmReleaseCommitComment>
+            <tagNameFormat>@{project.version}</tagNameFormat>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <artifactId>maven-release-strategies</artifactId>
+              <groupId>com.inditex.maven.release</groupId>
+              <version>0.7.1</version>
+            </dependency>
+            <dependency>
+              <artifactId>maven-release-semver-policy</artifactId>
+              <groupId>org.apache.maven.release</groupId>
+              <version>3.0.0-M4</version>
+            </dependency>
+          </dependencies>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.0.0-M4</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+  </build>
+
+  <dependencies />
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <artifactId>gridlinker-boot</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>gridlinker-domain</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>gridlinker-application</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>gridlinker-infrastructure</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>db2jcc4</artifactId>
+        <groupId>com.ibm.db2</groupId>
+        <version>4.19.80</version>
+      </dependency>
+      <dependency>
+        <artifactId>db2jcc_license_cu</artifactId>
+        <groupId>com.ibm.db2</groupId>
+        <version>9.7</version>
+      </dependency>
+
+      <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API. -->
+      <dependency>
+        <artifactId>gridlinker-api-rest</artifactId>
+        <groupId>${project.groupId}</groupId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <!-- Include API First REST contract definition. TODO: Only for archetype. Replace this for the real API.-->
+      <dependency>
+        <artifactId>amginitz-rest</artifactId>
+        <groupId>com.inditex.sscc.api</groupId>
+        <version>${amginitz-rest.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <description />
+  <developers />
+
+  <distributionManagement>
+    <repository>
+      <id>inditex-artifacts</id>
+      <name>Inditex Maven Repository</name>
+      <url>https://inditex.jfrog.io/inditex/maven-release-local</url>
+    </repository>
+    <site />
+    <snapshotRepository>
+      <id>inditex-artifacts</id>
+      <name>Inditex Maven Repository</name>
+      <url>https://inditex.jfrog.io/inditex/maven-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <groupId>com.inditex.mecc.mectlglnk</groupId>
+  <inceptionYear>2022</inceptionYear>
+  <licenses />
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>gridlinker-domain</module>
+    <module>gridlinker-application</module>
+    <module>gridlinker-infrastructure</module>
+    <module>gridlinker-api-rest</module>
+    <module>gridlinker-boot</module>
+    <module>jacoco-report-aggregate</module>
+  </modules>
+
+  <name>${project.groupId}:${project.artifactId}</name>
+
+  <organization>
+    <name>Industria de Diseño Textil, S.A.</name>
+    <url>https://inditex.com</url>
+  </organization>
+
+  <packaging>pom</packaging>
+
+  <parent>
+    <artifactId>amiga-framework</artifactId>
+    <groupId>com.inditex.aqsw.framework.amiga</groupId>
+    <relativePath />
+    <version>4.7.4</version>
+  </parent>
+
+  <pluginRepositories />
+
+  <profiles />
+  <properties>
+    <amginitz-rest.version>1.1.0</amginitz-rest.version>
+    <amiga-javaformat.version>2.1.0</amiga-javaformat.version>
+    <project.scm.id>inditex-scm-github</project.scm.id>
+    <scm-connection>scm:git:https://github.com/inditex/undefined.git</scm-connection>
+    <scm-developer-connection>scm:git:https://github.com/inditex/undefined.git</scm-developer-connection>
+    <scm-tag>HEAD</scm-tag>
+    <scm-url>https://github.com/inditex/undefined</scm-url>
+  </properties>
+
+  <reporting />
+  <repositories />
+
+  <scm>
+    <connection>${scm-connection}</connection>
+    <developerConnection>${scm-developer-connection}</developerConnection>
+    <tag>${scm-tag}</tag>
+    <url>${scm-url}</url>
+  </scm>
+
+  <url />
+
+  <version>0.1.0-SNAPSHOT</version>
+</project>

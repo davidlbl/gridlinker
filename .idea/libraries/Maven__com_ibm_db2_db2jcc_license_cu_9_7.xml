@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.ibm.db2:db2jcc_license_cu:9.7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/com/ibm/db2/db2jcc_license_cu/9.7/db2jcc_license_cu-9.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/com/ibm/db2/db2jcc_license_cu/9.7/db2jcc_license_cu-9.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/com/ibm/db2/db2jcc_license_cu/9.7/db2jcc_license_cu-9.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

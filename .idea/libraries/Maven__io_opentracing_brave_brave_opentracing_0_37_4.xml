@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.opentracing.brave:brave-opentracing:0.37.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/io/opentracing/brave/brave-opentracing/0.37.4/brave-opentracing-0.37.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/io/opentracing/brave/brave-opentracing/0.37.4/brave-opentracing-0.37.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/io/opentracing/brave/brave-opentracing/0.37.4/brave-opentracing-0.37.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

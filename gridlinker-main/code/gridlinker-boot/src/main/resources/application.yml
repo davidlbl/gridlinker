@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: mectlglnk
+  profiles:
+    active: standalone
+
+app:
+  version: @project.version@
+
+logging:
+  level:
+    root: ERROR
+
+amiga:
+  service:
+    rest-swagger:
+      enabled: true
+  data:
+    file:
+      output-pattern: gridlinker-xcatgroup-grid-insert.sql
+    jdbc:
+      pool:
+        hikari:
+          connection-timeout: 60000
+          validation-timeout: 30000
+          maximum-pool-size: 10
+          idle-timeout: 60000
+      datasource:
+        wcs-db:
+          driverClassName: com.ibm.db2.jcc.DB2Driver
+          jdbcUrl: ${db.url}
+          username: ${db.username}
+          password: ${db.password}
+          borrow-connection-timeout: 30
+          concurrent-connection-validation: true
+          connection-validation-interval: 30000
+          max-idle-time: 60
+          max-pool-size: 10
+          min-pool-size: 0

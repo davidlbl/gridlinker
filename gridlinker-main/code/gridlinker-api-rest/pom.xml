@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>gridlinker-api-rest</artifactId>
+
+  <build>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+    <plugins >
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>16</source>
+          <target>16</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <artifactId>gridlinker-domain</artifactId>
+      <groupId>${project.groupId}</groupId>
+    </dependency>
+
+    <dependency>
+      <artifactId>common-framework-starter</artifactId>
+      <groupId>com.inditex.aqsw.framework.common</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>service-framework-starter-rest</artifactId>
+      <groupId>com.inditex.aqsw.framework.service</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>amginitz-rest</artifactId>
+      <groupId>com.inditex.sscc.api</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <description>REST services definition module</description>
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>${project.groupId}:${project.artifactId}</name>
+
+  <packaging>jar</packaging>
+
+  <parent>
+    <artifactId>gridlinker</artifactId>
+    <groupId>com.inditex.mecc.mectlglnk</groupId>
+    <relativePath>..</relativePath>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent>
+
+  <reporting />
+</project>

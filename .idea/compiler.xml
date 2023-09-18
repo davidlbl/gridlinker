@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for com.inditex.mecc.mectlglnk:gridlinker" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar" />
+          <entry name="$PROJECT_DIR$/../../../../mnt/c/Users/davidlbl/.m2/repository/org/projectlombok/lombok-mapstruct-binding/0.1.0/lombok-mapstruct-binding-0.1.0.jar" />
+        </processorPath>
+        <module name="gridlinker-api-rest" />
+        <module name="gridlinker-application" />
+        <module name="gridlinker-boot" />
+        <module name="gridlinker-infrastructure" />
+        <module name="gridlinker-domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gridlinker" target="11" />
+      <module name="gridlinker-api-rest" target="16" />
+      <module name="gridlinker-application" target="17" />
+      <module name="gridlinker-boot" target="17" />
+      <module name="gridlinker-domain" target="11" />
+      <module name="gridlinker-infrastructure" target="16" />
+      <module name="jacoco-report-aggregate" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gridlinker" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gridlinker-api-rest" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gridlinker-application" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gridlinker-boot" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gridlinker-domain" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="gridlinker-infrastructure" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="jacoco-report-aggregate" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+    </option>
+  </component>
+</project>

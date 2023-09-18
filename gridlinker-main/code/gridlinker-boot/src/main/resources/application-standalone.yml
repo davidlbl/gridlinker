@@ -1,0 +1,13 @@
+logging:
+  level:
+    root: INFO
+amiga:
+  server:
+    context-path: /mectlglnk
+    port: 8080
+  service:
+    rest:
+      logging:
+        is-production: false
+metadata:
+  jirakey: mectlglnk
