@@ -9,8 +9,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>16</source>
-          <target>16</target>
+          <source>17</source>
+          <target>17</target>
         </configuration>
       </plugin>
     </plugins>
@@ -29,6 +29,10 @@
     <dependency>
       <artifactId>data-framework-starter-jdbc</artifactId>
       <groupId>com.inditex.aqsw.framework.data</groupId>
+    </dependency>
+    <dependency>
+      <groupId>com.inditex.aqsw.framework.service</groupId>
+      <artifactId>service-framework-starter-rest</artifactId>
     </dependency>
 
     <dependency>

@@ -21,8 +21,8 @@ public class GridController {
   }
 
   @PostMapping(value = "/gridlink", consumes = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<Void> linkGrids(@RequestBody final StoresDTO stores) {
-    this.linkGridsUseCase.linkGrids(stores.getStores().stream().map(StoreDTO::getStoreId).toList());
+  public ResponseEntity<Void> linkGrids(@RequestBody final StoreDTO store) {
+    this.linkGridsUseCase.linkGrids(store.getStoreId());
     return ResponseEntity.ok().build();
   }
 

@@ -15,16 +15,16 @@
         </processorPath>
         <module name="gridlinker-api-rest" />
         <module name="gridlinker-application" />
-        <module name="gridlinker-boot" />
         <module name="gridlinker-infrastructure" />
+        <module name="gridlinker-boot" />
         <module name="gridlinker-domain" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gridlinker" target="11" />
-      <module name="gridlinker-api-rest" target="16" />
+      <module name="gridlinker-api-rest" target="11" />
       <module name="gridlinker-application" target="17" />
-      <module name="gridlinker-boot" target="17" />
+      <module name="gridlinker-boot" target="11" />
       <module name="gridlinker-domain" target="11" />
       <module name="gridlinker-infrastructure" target="16" />
       <module name="jacoco-report-aggregate" target="11" />

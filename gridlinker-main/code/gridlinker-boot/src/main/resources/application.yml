@@ -12,12 +12,18 @@ logging:
     root: ERROR
 
 amiga:
+  common:
+    rest:
+      client:
+        catgroup-client:
+          base-url: https://axinstgzaranode1-std.central.inditex.grp/itxrest/1/catalog/store
   service:
     rest-swagger:
       enabled: true
   data:
     file:
-      output-pattern: gridlinker-xcatgroup-grid-insert.sql
+      save-pattern: gridlinker-xcatgroup-grid-%s.csv
+
     jdbc:
       pool:
         hikari:

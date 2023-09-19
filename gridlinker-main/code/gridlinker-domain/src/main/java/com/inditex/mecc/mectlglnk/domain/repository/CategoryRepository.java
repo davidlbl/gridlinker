@@ -5,9 +5,10 @@ import java.util.List;
 import com.inditex.mecc.mectlglnk.domain.entity.CatGroupId;
 import com.inditex.mecc.mectlglnk.domain.entity.StoreId;
 
-public interface GridCategoryGroupRepository {
+public interface CategoryRepository {
 
-  void saveCategoriesByStoreId(List<CatGroupId> categories, StoreId storeId);
+  List<CatGroupId> findIopCategoriesByStoreId(StoreId storeId);
 
+  boolean isValidCategoryByStoreId(CatGroupId catGroupId, StoreId storeId);
 
 }
