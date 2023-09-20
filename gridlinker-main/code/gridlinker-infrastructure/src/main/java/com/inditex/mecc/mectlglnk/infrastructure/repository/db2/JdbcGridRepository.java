@@ -57,16 +57,19 @@ public class JdbcGridRepository implements CategoryRepository {
 
   @Override
   public boolean isValidCategoryByStoreId(CatGroupId catGroupId, StoreId storeId) {
+    try {
+      Map<String, String> pathVariables = new HashMap<>();
+      pathVariables.put("storeId", String.valueOf(storeId.getValue()));
+      pathVariables.put("catgroupId",String.valueOf(catGroupId.getValue()));
 
-    Map<String, String> pathVariables = new HashMap<>();
-    pathVariables.put("storeId", String.valueOf(18702));
-    pathVariables.put("catgroupId",String.valueOf(2297834));
+      ResponseEntity<String> response = restClient.getForEntity(
+          "/{storeId}/category/{catgroupId}",
+          String.class,
+          pathVariables);
 
-    ResponseEntity<String> forEntity = restClient.getForEntity(
-        "/{storeId}/category/{catgroupId}",
-        String.class,
-        pathVariables);
-
-    return forEntity.getStatusCode().is2xxSuccessful();
+      return response.getStatusCode().is2xxSuccessful();
+    }catch (Exception e) {
+        return false;
+    }
   }
 }
