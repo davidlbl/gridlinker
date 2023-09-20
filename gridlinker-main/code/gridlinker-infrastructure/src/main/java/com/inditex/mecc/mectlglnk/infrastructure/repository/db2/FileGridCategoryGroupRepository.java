@@ -21,6 +21,9 @@ public class FileGridCategoryGroupRepository implements GridCategoryGroupReposit
   @Override
   public void saveCategoriesByStoreId(List<CatGroupId> categories, StoreId storeId) {
     try {
+
+      log.info("Generating file to storeId: {} with {} categories", storeId.getValue(), categories.size());
+
       final List<String> categoryIdentifiers = categories.stream()
           .map(CatGroupId::getValue)
           .map(String::valueOf)
@@ -32,6 +35,8 @@ public class FileGridCategoryGroupRepository implements GridCategoryGroupReposit
       this.addFileHeader(file);
 
       FileUtils.writeLines(file, categoryIdentifiers, true);
+
+      log.info("File {} generated successfully", pathname);
     } catch (final IOException e) {
       log.error("Error writing file", e);
     }

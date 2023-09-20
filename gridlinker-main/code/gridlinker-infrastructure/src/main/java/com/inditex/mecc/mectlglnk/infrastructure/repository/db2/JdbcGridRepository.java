@@ -1,5 +1,7 @@
 package com.inditex.mecc.mectlglnk.infrastructure.repository.db2;
 
+import static com.inditex.mecc.mectlglnk.infrastructure.repository.db2.JdbcQueryConstants.XCATGROUP_GRID_STATEMENT;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collections;
@@ -13,6 +15,7 @@ import com.inditex.mecc.mectlglnk.domain.entity.StoreId;
 import com.inditex.mecc.mectlglnk.domain.repository.CategoryRepository;
 
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.text.StringSubstitutor;
 import org.slf4j.Logger;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
@@ -40,10 +43,12 @@ public class JdbcGridRepository implements CategoryRepository {
   public List<CatGroupId> findIopCategoriesByStoreId(StoreId storeId) {
     try {
 
-      SqlParameterSource parameters = new MapSqlParameterSource()
-          .addValue(JdbcQueryConstants.STORE_ID, storeId.getValue());
+      Map<String, String> parameters = new HashMap<>();
+      parameters.put(JdbcQueryConstants.STORE_ID, String.valueOf(storeId.getValue()));
 
-      return this.jdbcTemplate.query(JdbcQueryConstants.XCATGROUP_GRID_DELETE_STATEMENT, parameters, JdbcGridRepository::rowMapper);
+      String query =StringSubstitutor.replace(XCATGROUP_GRID_STATEMENT, parameters, "{", "}");
+
+      return this.jdbcTemplate.query(query, JdbcGridRepository::rowMapper);
     } catch (final EmptyResultDataAccessException e) {
       this.logger.warn("Query GET_DISTINCT_GRID_IDS_QUERY for STORE_ID [{}] returned no values.", storeId.getValue(), e);
       return Collections.emptyList();
