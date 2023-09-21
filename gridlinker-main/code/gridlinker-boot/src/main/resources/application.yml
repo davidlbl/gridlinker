@@ -16,7 +16,7 @@ amiga:
     rest:
       client:
         catgroup-client:
-          base-url: https://axinstgzaranode1-std.central.inditex.grp/itxrest/1/catalog/store
+          base-url: https://mectlgcmd-productandcatalog-za-private.axinocp1.central.inditex.grp
   service:
     rest-swagger:
       enabled: true
