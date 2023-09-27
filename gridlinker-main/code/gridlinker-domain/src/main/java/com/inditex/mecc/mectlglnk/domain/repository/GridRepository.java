@@ -2,8 +2,9 @@ package com.inditex.mecc.mectlglnk.domain.repository;
 
 import com.inditex.mecc.mectlglnk.domain.entity.GridCategoryGroup;
 
-public interface CategoryRepository {
+public interface GridRepository {
 
-  boolean existCategoryBy(GridCategoryGroup gridCategoryGroup);
+  boolean existGridBy(GridCategoryGroup gridCategoryGroup);
+
 
 }

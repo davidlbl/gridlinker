@@ -15,7 +15,9 @@ amiga:
   common:
     rest:
       client:
-        catgroup-client:
+        navigation-client:
+          base-url: https://mecnavreader-productandcatalog-private.za.apps.ieec1ocp1.ecommerce.inditex.grp
+        gridcore-client:
           base-url: https://mectlgcmd-productandcatalog-za-private.axinocp1.central.inditex.grp
   service:
     rest-swagger:

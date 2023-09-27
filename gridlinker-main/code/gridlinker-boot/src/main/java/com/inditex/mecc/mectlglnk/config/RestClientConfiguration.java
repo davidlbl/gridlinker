@@ -11,8 +11,14 @@ import org.springframework.stereotype.Component;
 public class RestClientConfiguration {
 
   @Bean
-  @ConfigurationProperties(prefix = "amiga.common.rest.client.catgroup-client")
-  public RestClient restClient(final RestClientBuilder builder) {
+  @ConfigurationProperties(prefix = "amiga.common.rest.client.gridcore-client")
+  public RestClient gridCoreRestClient(final RestClientBuilder builder) {
+    return builder.build();
+  }
+
+  @Bean
+  @ConfigurationProperties(prefix = "amiga.common.rest.client.navigation-client")
+  public RestClient navigationRestClient(final RestClientBuilder builder) {
     return builder.build();
   }
 }
